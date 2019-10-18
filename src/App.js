@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import logo from "./logo.svg";
-import "./App.css";
+import Todo from "./Todo.js";
 
 function App() {
   const [todos, setTodo] = useState([
@@ -16,11 +16,11 @@ function App() {
 
   //Mapping
 
-  todos.map();
+  // todos.map();
 
   return (
     <div className="App">
-      <p> Hey</p>
+      <Todo />
     </div>
   );
 }
