@@ -1,12 +1,18 @@
 import React, { useState } from "react";
-import logo from "./logo.svg";
 
-function Todo() {
-  return (
-    <div className="App">
-      <p> Hey</p>
-    </div>
+function Todo({ todos }) {
+  const todoList = todos.length ? (
+    todos.map(todo => {
+      return (
+        <div>
+          <span>{todo.content}</span>
+        </div>
+      );
+    })
+  ) : (
+    <p> You have NO todos left</p>
   );
+  return <div className="App">{todoList}</div>;
 }
 
 export default Todo;

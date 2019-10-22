@@ -1,17 +1,20 @@
 import React, { useState } from "react";
-import logo from "./logo.svg";
 import Todo from "./Todo.js";
 
-function App() {
+class App extends React.Component {
+  state = {
+    todos: [{ id: 1, content: "Do Stuff" }, { id: 2, content: "Do More Stuff" }]
+  };
   //Mapping
 
-  // todos.map();
-
-  return (
-    <div className="App">
-      <Todo />
-    </div>
-  );
+  render() {
+    return (
+      <div className="App">
+        <h1 className="center blue-text">List</h1>
+        <Todo todos={this.state.todos} />
+      </div>
+    );
+  }
 }
 
 export default App;
